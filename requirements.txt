@@ -7,6 +7,7 @@ scipy>=1.7
 matplotlib>=3.4
 PyYAML>=5.4
 # Optional: ComBat harmonization (normalization.combat_harmonize)
-statsmodels>=0.13
+# Package name == import name: neuroCombat (NOT statsmodels).
+neuroCombat
 # Test-only
 pytest>=7.0

@@ -38,7 +38,9 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-combat = ["statsmodels>=0.13"]
+# ComBat harmonization operates on feature tables via the neuroCombat package
+# (import name `neuroCombat`), not statsmodels.
+combat = ["neuroCombat"]
 test = ["pytest>=7.0"]
 
 [project.scripts]
