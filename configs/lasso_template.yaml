@@ -1,0 +1,71 @@
+# BIC-LASSO configuration TEMPLATE for a new dataset.
+#
+# Copy this file, replace every placeholder, then:
+#   python -m lumbarmri.bic_lasso validate --config your_config.yaml
+#   python -m lumbarmri.bic_lasso run       --config your_config.yaml
+#
+# Rules:
+#   * Paths are resolved relative to THIS file's directory.
+#   * Column names must match the CSV header exactly.
+#   * Rows with any missing value among y_col + candidate_vars are dropped
+#     (complete-case analysis); check the printed sample count afterwards.
+#   * Predictors are standardized internally before fitting -- do NOT
+#     pre-standardize; do make sure every column is numeric-coercible.
+
+# --- data ------------------------------------------------------------------
+input_csv: path/to/your_data.csv      # REQUIRED
+output_dir: outputs/your_run          # figures + run_summary.json land here
+
+y_col: your_outcome_column            # REQUIRED (e.g. outcome_score)
+
+# REQUIRED: candidate predictors, in the order you want them considered.
+# Use the RAW column names of your CSV -- they appear in the figure legend so
+# a reader can match your deposited dataset column for column.
+candidate_vars:
+  - predictor_01
+  - predictor_02
+  # ... all candidates ...
+
+# Optional: raw column name -> manuscript/display name, used ONLY for the
+# stdout legend note (e.g. "raw_col_2": "Display name L4").  Plotted labels are
+# always the raw names.  Delete or leave empty if not needed.
+# var_name_map:
+#   raw_name: display_name
+
+# --- alpha grid ------------------------------------------------------------
+# One traversal over this grid produces BOTH figures (coefficient path +
+# BIC criterion) and therefore ONE shared lambda.
+alpha_grid:
+  min: 1.0e-3        # smallest alpha (largest model)
+  max: 1.0e1         # largest alpha (all-zero model)
+  num: 200           # grid points; 200 matches the reference run
+  spacing: log       # log (recommended) | linear
+# Alternatively give an explicit grid:
+# alpha_grid:
+#   values: [0.001, 0.003, 0.01, 0.03, 0.1]
+
+# --- solver ----------------------------------------------------------------
+max_iter: 50000      # Lasso solver iteration cap
+nz_tol: 1.0e-8       # |coef| > nz_tol counts as non-zero (df of the BIC)
+
+# --- bootstrap band --------------------------------------------------------
+# Percentile band for the BIC criterion.  The constant term n*ln(2*pi*s2) is
+# RETAINED, so the band is total uncertainty and tends to be wide -- quote
+# lambda_ci (not band width) for stability statements.
+bootstrap:
+  n_boot: 1000       # publication runs: 1000; quick drafts: 200
+  seed: 42           # RandomState seed; keep 42 for reproducibility
+  ci_level: 0.95
+  fill_alpha: 0.20   # band opacity in the figure
+
+# --- baseline (recommended) ------------------------------------------------
+# Freeze the current run so any later data/library change fails loudly:
+#   python -m lumbarmri.bic_lasso write-baseline --config your_config.yaml \
+#       --output your_baseline.json
+# then point baseline_path at that file.  Delete the key to skip the check.
+# baseline_path: path/to/your_baseline.json
+
+# --- figures ---------------------------------------------------------------
+plot:
+  figsize: [8.0, 6.0]
+  xlim: [-3.0, 1.0]  # log10(alpha) axis range; keep = [log10(min), log10(max)]

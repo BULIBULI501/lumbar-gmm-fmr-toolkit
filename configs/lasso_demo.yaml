@@ -1,0 +1,65 @@
+# BIC-LASSO demo configuration -- synthetic demo dataset.
+#
+# Runs end to end with the committed synthetic data (examples/demo_data/):
+#   python -m lumbarmri.bic_lasso run --config configs/lasso_demo.yaml
+#
+# Paths are resolved relative to THIS file's directory.
+# For real data copy lasso_template.yaml instead.
+
+input_csv: ../examples/demo_data/demo_clinic.csv
+output_dir: ../outputs/lasso_demo
+
+# Outcome column.
+y_col: y
+
+# Candidate predictors, in plot order (all 18 synthetic columns).
+candidate_vars:
+  - var_01
+  - var_02
+  - var_03
+  - var_04
+  - var_05
+  - var_06
+  - var_07
+  - var_08
+  - var_09
+  - var_10
+  - var_11
+  - var_12
+  - var_13
+  - var_14
+  - var_15
+  - var_16
+  - var_17
+  - var_18
+
+# Optional raw -> display name mapping (stdout legend note only; plotted
+# labels always use the raw column names).  Empty for generic demo columns.
+var_name_map: {}
+
+# Regular alpha grid: one traversal yields both figures.
+alpha_grid:
+  min: 1.0e-3
+  max: 1.0e1
+  num: 200
+  spacing: log        # log | linear
+
+# Solver cap and non-zero threshold (frozen defaults).
+max_iter: 50000
+nz_tol: 1.0e-8
+
+# Percentile bootstrap band for the BIC criterion.
+bootstrap:
+  n_boot: 200         # demo value; use 1000 for publication runs
+  seed: 42
+  ci_level: 0.95
+  fill_alpha: 0.20
+
+# Baseline written by `write-baseline` on the committed synthetic data;
+# `run` compares against it and fails loudly on any data/library change.
+baseline_path: ../examples/demo_data/demo_baseline.json
+
+# Figure geometry.
+plot:
+  figsize: [8.0, 6.0]
+  xlim: [-3.0, 1.0]

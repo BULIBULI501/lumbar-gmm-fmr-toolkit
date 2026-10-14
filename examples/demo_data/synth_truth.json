@@ -1,0 +1,33 @@
+{
+  "generator": "lumbarmri.synth.make_clinic",
+  "seed": 42,
+  "n_samples": 200,
+  "n_predictors": 18,
+  "predictor_correlation": "AR(1)-like, rho=0.5",
+  "noise_sd": 1.0,
+  "signal_model": "y = X @ beta + noise_sd * N(0,1); predictors standardised",
+  "true_coefficients": {
+    "var_03": 1.2,
+    "var_07": -0.8,
+    "var_11": 0.55,
+    "var_15": -0.35
+  },
+  "n_true_signals": 4,
+  "n_noise_predictors": 14,
+  "noise_predictors": [
+    "var_01",
+    "var_02",
+    "var_04",
+    "var_05",
+    "var_06",
+    "var_08",
+    "var_09",
+    "var_10",
+    "var_12",
+    "var_13",
+    "var_14",
+    "var_16",
+    "var_17",
+    "var_18"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "generated_by": "lumbarmri.bic_lasso write-baseline",
+  "input_csv": "configs\\..\\examples\\demo_data\\demo_clinic.csv",
+  "n_samples": 200,
+  "n_candidate_vars": 18,
+  "alpha_grid_points": 200,
+  "lambda_grid": 0.0775259748862946,
+  "log10_lambda": -1.1106,
+  "n_selected": 6,
+  "noise_variance": 1.007417717916129,
+  "criterion_min": 595.2295221195652,
+  "criterion_max": 1043.7133171988964,
+  "lars_lambda": 0.07621752783873577
+}
