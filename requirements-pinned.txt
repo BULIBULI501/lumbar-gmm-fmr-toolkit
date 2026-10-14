@@ -1,0 +1,13 @@
+# Tested combination (primary verification environment).
+#   Python 3.9.18 + SimpleITK 2.5.3  -> all self-checks green
+#   Python 3.9.x  + SimpleITK 2.3.1  -> compatibility-verified (see docs/ALGORITHM_NOTES.md)
+# Re-create with:  pip install -r requirements-pinned.txt
+SimpleITK==2.5.3
+numpy==1.26.4
+pandas==2.2.2
+scikit-learn==1.6.1
+scipy==1.13.0
+matplotlib==3.8.4
+PyYAML==6.0.1
+statsmodels==0.14.6
+pytest==8.3.5

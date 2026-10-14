@@ -1,0 +1,12 @@
+# Minimum dependency floors (see requirements-pinned.txt for the tested combination).
+SimpleITK>=2.2
+numpy>=1.20
+pandas>=1.3
+scikit-learn>=1.0
+scipy>=1.7
+matplotlib>=3.4
+PyYAML>=5.4
+# Optional: ComBat harmonization (normalization.combat_harmonize)
+statsmodels>=0.13
+# Test-only
+pytest>=7.0
