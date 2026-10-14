@@ -1,0 +1,191 @@
+[
+  {
+    "file": "case_01_image.nii.gz",
+    "header_dirty": {
+      "data_type": false,
+      "db_name": false,
+      "descrip": false,
+      "aux_file": false,
+      "intent_name": false
+    },
+    "metadata_dropped": [
+      "ITK_FileNotes",
+      "aux_file",
+      "descrip",
+      "intent_name",
+      "qform_code_name",
+      "qto_xyz",
+      "sform_code_name"
+    ],
+    "pixel_md5": "5c028b7f25536164ae11f5c20dbb4271",
+    "geometry_ok": true
+  },
+  {
+    "file": "case_01_ME_label.nii.gz",
+    "header_dirty": {
+      "data_type": false,
+      "db_name": false,
+      "descrip": false,
+      "aux_file": false,
+      "intent_name": false
+    },
+    "metadata_dropped": [
+      "ITK_FileNotes",
+      "aux_file",
+      "descrip",
+      "intent_name",
+      "qform_code_name",
+      "qto_xyz",
+      "sform_code_name"
+    ],
+    "pixel_md5": "5cf7b63af8ff6f34d234fce415f8975e",
+    "geometry_ok": true
+  },
+  {
+    "file": "case_01_P_label.nii.gz",
+    "header_dirty": {
+      "data_type": false,
+      "db_name": false,
+      "descrip": false,
+      "aux_file": false,
+      "intent_name": false
+    },
+    "metadata_dropped": [
+      "ITK_FileNotes",
+      "aux_file",
+      "descrip",
+      "intent_name",
+      "qform_code_name",
+      "qto_xyz",
+      "sform_code_name"
+    ],
+    "pixel_md5": "f1971f7d08ac2ce34fb7efe180538a8b",
+    "geometry_ok": true
+  },
+  {
+    "file": "case_02_image.nii.gz",
+    "header_dirty": {
+      "data_type": false,
+      "db_name": false,
+      "descrip": false,
+      "aux_file": false,
+      "intent_name": false
+    },
+    "metadata_dropped": [
+      "ITK_FileNotes",
+      "aux_file",
+      "descrip",
+      "intent_name",
+      "qform_code_name",
+      "qto_xyz",
+      "sform_code_name"
+    ],
+    "pixel_md5": "66919536012eadae2a3c64a7efaa66ad",
+    "geometry_ok": true
+  },
+  {
+    "file": "case_02_ME_label.nii.gz",
+    "header_dirty": {
+      "data_type": false,
+      "db_name": false,
+      "descrip": false,
+      "aux_file": false,
+      "intent_name": false
+    },
+    "metadata_dropped": [
+      "ITK_FileNotes",
+      "aux_file",
+      "descrip",
+      "intent_name",
+      "qform_code_name",
+      "qto_xyz",
+      "sform_code_name"
+    ],
+    "pixel_md5": "db4a76d08523755a84e49efbb60596e6",
+    "geometry_ok": true
+  },
+  {
+    "file": "case_02_P_label.nii.gz",
+    "header_dirty": {
+      "data_type": false,
+      "db_name": false,
+      "descrip": false,
+      "aux_file": false,
+      "intent_name": false
+    },
+    "metadata_dropped": [
+      "ITK_FileNotes",
+      "aux_file",
+      "descrip",
+      "intent_name",
+      "qform_code_name",
+      "qto_xyz",
+      "sform_code_name"
+    ],
+    "pixel_md5": "d95b3f4a6f85be4a3cd8c4f0c2f87edc",
+    "geometry_ok": true
+  },
+  {
+    "file": "case_03_image.nii.gz",
+    "header_dirty": {
+      "data_type": false,
+      "db_name": false,
+      "descrip": false,
+      "aux_file": false,
+      "intent_name": false
+    },
+    "metadata_dropped": [
+      "ITK_FileNotes",
+      "aux_file",
+      "descrip",
+      "intent_name",
+      "qform_code_name",
+      "qto_xyz",
+      "sform_code_name"
+    ],
+    "pixel_md5": "87bbfe393e85898ca9c02ad24db93e94",
+    "geometry_ok": true
+  },
+  {
+    "file": "case_03_ME_label.nii.gz",
+    "header_dirty": {
+      "data_type": false,
+      "db_name": false,
+      "descrip": false,
+      "aux_file": false,
+      "intent_name": false
+    },
+    "metadata_dropped": [
+      "ITK_FileNotes",
+      "aux_file",
+      "descrip",
+      "intent_name",
+      "qform_code_name",
+      "qto_xyz",
+      "sform_code_name"
+    ],
+    "pixel_md5": "7594a52ffe2db2194a337c0118ec6f71",
+    "geometry_ok": true
+  },
+  {
+    "file": "case_03_P_label.nii.gz",
+    "header_dirty": {
+      "data_type": false,
+      "db_name": false,
+      "descrip": false,
+      "aux_file": false,
+      "intent_name": false
+    },
+    "metadata_dropped": [
+      "ITK_FileNotes",
+      "aux_file",
+      "descrip",
+      "intent_name",
+      "qform_code_name",
+      "qto_xyz",
+      "sform_code_name"
+    ],
+    "pixel_md5": "b300f8c51ae06de66a3c39607bde116b",
+    "geometry_ok": true
+  }
+]
